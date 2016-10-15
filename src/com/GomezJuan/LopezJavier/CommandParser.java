@@ -4,7 +4,7 @@ public class CommandParser {
 	
 	public static Command parse (String line){
 		Command comando =  null;
-		//Falta parsear
+		line = line.toLowerCase();
 		switch (line){
 		case "help":
 			comando = new Command(ENUM_COMMAND.HELP, null, 0);
