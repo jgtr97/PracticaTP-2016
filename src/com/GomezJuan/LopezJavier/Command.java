@@ -12,6 +12,13 @@ public class Command {
 	}
 	
 	public boolean execute(Engine engine){
-		return true;
+		if (this.command == ENUM_COMMAND.HELP){
+			engine.ejecutarhelp();
+			return true;
+		}
+		return false;
+	}
+	public String toString (){
+		return this.command+ ", " + this.instruction + ", " + this.replace;
 	}
 }
